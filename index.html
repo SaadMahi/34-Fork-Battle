@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background: #6592cf;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+
+        height: 100vh;
+      }
+
+      .container {
+        width: 140px;
+        height: 200px;
+
+        position: absolute;
+        bottom: 0;
+
+        display: flex;
+        justify-content: center;
+      }
+
+      .rod {
+        width: 20px;
+        height: 55px;
+        background: #060f55;
+      }
+
+      .circle {
+        width: 140px;
+        height: 140px;
+        background: #060f55;
+
+        border-radius: 0 0 50% 50%;
+
+        position: absolute;
+        bottom: 50px;
+      }
+
+      .edge-two {
+        transform: translateX(-200%);
+      }
+      .edge-six {
+        transform: translateX(200%);
+      }
+      .edge-one {
+        transform: translateX(-300%);
+      }
+      .edge-three {
+        transform: translateX(-100%);
+      }
+      .edge-five {
+        transform: translateX(100%);
+      }
+      .edge-seven {
+        transform: translateX(300%);
+      }
+
+      .container div:nth-child(odd),
+      .container div:nth-child(even) {
+        position: absolute;
+
+        border-radius: 10px;
+        width: 20px;
+        height: 110px;
+      }
+
+      .container div:nth-child(odd) {
+        background: #060f55;
+      }
+
+      [class^="edge-"]:nth-child(even) {
+        background: #6592cf;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="rod"></div>
+    <div class="circle">
+      <div class="container">
+        <div class="edge-one"></div>
+        <div class="edge-two"></div>
+        <div class="edge-three"></div>
+        <div class="edge-four"></div>
+        <div class="edge-five"></div>
+        <div class="edge-six"></div>
+        <div class="edge-seven"></div>
+      </div>
+    </div>
+  </body>
+</html>
